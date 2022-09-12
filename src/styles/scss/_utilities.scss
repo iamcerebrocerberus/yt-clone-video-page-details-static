@@ -1,0 +1,72 @@
+@use "./abstracts" as *;
+
+// dimension utitlies
+.w-100 {
+  width: 100%;
+}
+
+// flex properties utilities
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.flex-end {
+  justify-self: flex-end;
+}
+// margins and padding utilities
+.pd-lr-4 {
+  padding-inline: 16px;
+}
+
+.pd-5 {
+  padding: 5px;
+}
+
+.pd-lr-2 {
+  @include respond-to-min(340px) {
+    padding-inline: 2px;
+  }
+}
+.mg-l-4 {
+  margin-inline-start: 4px;
+}
+
+.mg-i-s-auto {
+  margin-inline-start: auto;
+}
+
+.mg-i-s-6 {
+  margin-inline-start: 12px;
+}
+
+.action-icon-text {
+  @include respond-to(314px) {
+    display: none;
+  }
+}
+
+.text-upper {
+  text-transform: uppercase;
+}

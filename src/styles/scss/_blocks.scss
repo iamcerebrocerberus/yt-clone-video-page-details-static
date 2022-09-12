@@ -1,0 +1,235 @@
+@use "sass:map";
+@use "./abstracts" as *;
+
+body {
+  @include get-bg-color("backgrounds", "main-bg");
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  @include get-color("text-colors", "text-cl");
+  padding-inline: 6px;
+
+  @include respond-to-min(581px) {
+    padding-inline: 18px;
+  }
+}
+
+.yt-head {
+  &__youtube-icon {
+    @include get-color("icon-colors", "youtube-icon");
+    font-size: 25px;
+  }
+  &__youtube-text {
+    font-weight: 700;
+  }
+}
+
+input[type="search"] {
+  background: transparent;
+  border: 1px solid gray;
+  color: hsl(0, 0%, 100%);
+}
+
+@include respond-to(510px) {
+  input[type="search"] {
+    display: none;
+  }
+}
+
+button[type="submit"] {
+  color: hwb(0 100% 0%);
+  font-weight: 100;
+}
+
+header {
+  border-bottom: 1px solid map-get($colors, "border-colors", "bottoms");
+  padding-block: 7px 7px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 111111;
+  background-color: map-get($colors, "backgrounds", "main-bg");
+}
+
+.video-wrap {
+  margin-block-start: 3.4rem;
+  &__vid-content {
+    position: relative;
+  }
+
+  &__vid-controls {
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    @include respond-to(558px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.icon * {
+  cursor: pointer;
+}
+
+.progress {
+  height: 3px;
+  background: rgba(231, 228, 228, 0.567);
+  position: absolute;
+  top: 85%;
+  width: 96%;
+  @include respond-to(558px) {
+    top: 80%;
+  }
+  @include respond-to(340px) {
+    top: 78%;
+  }
+  .progress-value {
+    display: block;
+    width: 75%;
+    height: 100%;
+    background-color: red;
+  }
+}
+
+.timestamp {
+  font-size: 12px;
+}
+
+.separator {
+  @include respond-to(364px) {
+    display: none;
+  }
+}
+
+.total-time {
+  @include respond-to(364px) {
+    display: none;
+  }
+}
+
+.video-info {
+  position: relative;
+  padding-block: 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: map-get($colors, "border-colors", "bottoms");
+    bottom: 0;
+  }
+  &__title {
+    margin-block-end: 3px;
+  }
+
+  &__views-date {
+    gap: 6px;
+    font-size: 13px;
+    color: hsla(0, 0%, 100%, 0.433);
+  }
+
+  @include respond-to(496px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.action-icons {
+  gap: 7px;
+  font-size: 12px;
+
+  @include respond-to(496px) {
+    margin-inline-start: 0;
+  }
+
+  i {
+    opacity: 0.6;
+  }
+
+  &__like-dislike {
+    gap: 15px;
+  }
+
+  * {
+    cursor: pointer;
+  }
+}
+
+.action-icon-bg {
+  background-color: rgba(255, 255, 255, 0.101);
+  padding: 4px 9px;
+  border-radius: 13px;
+}
+
+.avatar {
+  position: relative;
+  margin-block-start: 19px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: map-get($colors, "border-colors", "bottoms");
+    bottom: -17px;
+  }
+  &__img {
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: hsl(197, 100%, 50%);
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      width: inherit;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      padding: 6px;
+    }
+  }
+
+  &__name-subs {
+    .name {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .subs {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(236, 233, 233, 0.711);
+    }
+  }
+  &__subs-btn {
+    background-color: rgb(196, 33, 33);
+    font-weight: 500;
+    padding-inline: 11px;
+    height: 2.5rem;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  &__about {
+    margin-block-start: 29px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .main-container {
+    max-width: 76.125rem;
+  }
+}

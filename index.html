@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Africa-Opensource" />
+    <meta name="description" content="A youtube clone for mentees" />
+    <link rel="stylesheet" href="./dist/main.mini.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Youtube clone | page details</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="yt-head flex align-center space-between pd-lr-4">
+        <div class="yt-head__youtube flex align-center">
+          <span class="yt-head__youtube-icon">
+            <i class="fa-brands fa-youtube"></i>
+          </span>
+          <span class="yt-head__youtube-text mg-l-4">YOUTUBE</span>
+        </div>
+        <div class="yt-head__search-rec flex align-center">
+          <form action="#" class="">
+            <input
+              type="search"
+              name=""
+              id=""
+              placeholder="search video"
+              class="pd-lr-4"
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass mg-l-4"></i>
+            </button>
+          </form>
+          <span class="yt-head__microphone">
+            <i class="fa-sharp fa-solid fa-microphone mg-l-4"></i>
+          </span>
+        </div>
+        <div class="yt-head__icons pd-2">
+          <span class="yt-head__add-video">
+            <i class="fas fa-video"></i>
+          </span>
+          <span class="yt-head__notification">
+            <i class="far fa-bell"></i>
+          </span>
+          <span class="yt-head__avatar">
+            <i class="far fa-user"></i>
+          </span>
+        </div>
+      </header>
+      <div class="video-wrap pd-lr-2">
+        <div class="video-wrap__left">
+          <div class="video-wrap__vid">
+            <div class="video-wrap__vid-content flex justify-center">
+              <img src="./images/house-of-the-dragon-ka-1920-1.webp" alt="" />
+              <div class="progress">
+                <span class="progress-value"></span>
+              </div>
+              <div
+                class="video-wrap__vid-controls w-100 flex align-center pd-5 pd-2"
+              >
+                <span class="controls-left icon">
+                  <i class="fa-sharp fa-solid fa-play"></i>
+                  <i class="fa-solid fa-backward"></i>
+                  <i class="fa-solid fa-forward"></i>
+                  <i class="fa-solid fa-volume-high"></i>
+                </span>
+                <span class="timestamp mg-i-s-6">
+                  <span class="curr-time">11:45</span>
+                  <span class="separator">/</span>
+                  <span class="total-time">1:23:30</span>
+                </span>
+                <span class="controls-right mg-i-s-auto icon">
+                  <i class="fa-solid fa-repeat"></i>
+                  <i class="fa-solid fa-closed-captioning"></i>
+                  <i class="fa-solid fa-gear"></i>
+                  <i class="fa-solid fa-expand"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="video-info flex align-center">
+            <div class="video-info__about">
+              <p class="video-info__title">Lorem ipsum dolor sit.</p>
+              <p class="video-info__views-date flex align-center">
+                <span class="video-info__views">
+                  <span class="views">121,342</span>
+                  <span class="text-views">views</span>
+                </span>
+                <span class="views-date-separator">|</span>
+                <span class="video-info__date">Sep 8, 2022</span>
+              </p>
+            </div>
+            <div class="action-icons flex align-center mg-i-s-auto">
+              <div class="action-icons__like-dislike flex action-icon-bg">
+                <div class="action-icons__like flex align-center">
+                  <span><i class="fa-solid fa-thumbs-up"></i></span>
+                  <span class="mg-l-4">2.4k</span>
+                </div>
+                <div class="action-icons__dislike">
+                  <i class="fa-solid fa-thumbs-down"></i>
+                </div>
+              </div>
+              <div class="action-icons__share action-icon-bg">
+                <span>
+                  <i class="fa-solid fa-share"></i>
+                </span>
+                <span class="mg-l-4 action-icon-text">share</span>
+              </div>
+              <div class="action-icon-bg">
+                <span><i class="fa-sharp fa-solid fa-scissors"></i></span>
+                <span class="mg-l-4 action-icon-text">clip</span>
+              </div>
+              <div class="action-icon-bg">
+                <span><i class="fa-regular fa-bookmark"></i></span>
+                <span class="mg-l-4">save</span>
+              </div>
+            </div>
+          </div>
+          <div class="avatar flex">
+            <div class="avatar__img">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="avatar__info flex col w-100 mg-i-s-6">
+              <div class="flex w-100">
+              <div class="avatar__name-subs">
+                <p class="name">Mentees</p>
+                <div class="subs flex">
+                  <p>
+                    <p class="sub-count">1.4</p>
+                    <span class="sub-unit">M</span>
+                  </p>
+                  <p class="subscribers mg-l-4">subscribers</p>
+                </div>
+              </div>
+              <p
+                class="avatar__subs-btn flex-end mg-i-s-auto text-upper flex align-center justify-center self-center"
+              >
+                <span> subscribe </span>
+              </p>
+            </div>
+            <div class="avatar__about">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eius! Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="video-wrap__right"></div>
+      </div>
+    </div>
+  </body>
+</html>

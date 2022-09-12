@@ -1,0 +1,39 @@
+@use "sass:map";
+
+// variables
+$colors: (
+  "backgrounds": (
+    "main-bg": hsl(0, 1%, 14%),
+  ),
+  "text-colors": (
+    "text-cl": hsl(0, 0%, 100%),
+  ),
+  "icon-colors": (
+    "youtube-icon": hsl(0, 100%, 50%),
+  ),
+  "border-colors": (
+    "bottoms": hsl(0, 2%, 46%),
+  ),
+);
+
+@mixin get-color($key, $val) {
+  $val: map-get($colors, $key, $val);
+  color: $val;
+}
+
+@mixin get-bg-color($key, $val) {
+  $val: map-get($colors, $key, $val);
+  background-color: $val;
+}
+
+@mixin respond-to($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-to-min($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
